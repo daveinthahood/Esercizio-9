@@ -1,0 +1,118 @@
+main {
+    display: flex;
+    justify-content: center;
+}
+
+main #main-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1500px;
+    gap: 20px;
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#a9a9a9, #f0f0f0);
+    max-width: 380px;
+    box-shadow: 0 5px 5px rgb(196, 196, 196);
+    border-radius: 12px;
+}
+
+/* fino a qui abbiamo impostato le carte sulla pagina centralmente*/
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+    margin: 3px;
+
+}
+
+.avatar {
+    padding: 0.3rem;
+}
+
+.avatar>img {
+    border-radius: 55%;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.user-date {
+    margin: 5px;
+    align-items: center;
+}
+
+.card-header .name-user {
+    font-weight: 400;
+    margin: 0.2rem
+}
+
+.card-header .data {
+    display: flex;
+    flex-direction: row;
+    font-weight: 300;
+    font-size: 10px;
+    color: white;
+    margin-left: 6px;
+    margin-top: 0px;
+}
+/* fatto header */
+#icon {
+    align-self: center;
+    margin-right: 15px;
+    margin-left: auto;
+}
+
+
+.photo {
+    width: 100%;
+    height: 17rem;
+    object-fit: cover;
+}
+
+.card-icon {
+    align-items: end;
+    margin-top: 15px;
+    margin-left: 10px;    
+}
+
+/*inserita foto */
+.card-txt {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95%;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+}
+/*testo*/
+
+@media screen and (max-width:768px) {
+    main #main-wrapper {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    main #main-wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
